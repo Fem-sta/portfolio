@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- ===link css === -->
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="button-styles.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="layout.css">
+    
+
+    <!-- ====link libraries ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+</head>
+<body>
+    <div class="header">
+        <div class="left-section">
+            <i class="fa-solid fa-bars nav-icon" id="nav-control" onclick="toggleNav()"></i>
+        </div>
+
+        <div class="mid-section">
+             <div class="box">
+                <span class="label">
+                    <img class="eyebrow-img" src="images/eyebrow.png" alt="img">
+                </span>
+             </div>
+             <div class="animated-seq"></div>
+        </div>
+
+        <div class="right-section">
+            <div class="wrapper">
+                <!-- mail -->
+                <div class="button">
+                    <div class="icon">
+                        <img src="images/email.png" alt="image" class="mail-icon">
+                    </div>
+               
+                    <span>Email</span>
+               </div>
+               <!-- instagram -->
+               <div class="button">
+                    <div class="icon">
+                        <img class="instagram-logo" src="images/instagram (2).png">
+                    </div>
+                
+                    <span>Instagram</span>
+               </div>
+               <!-- linkedin -->
+               <div class="button">
+                    <div class="icon">
+                        <img class="linkedin-icon" src="images/linkedin.png">
+                    </div>
+                    <span>LinkedIn</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="nav" id="nav-bar">
+        <ul class="navigation-bar">
+            <li>
+                <div class="nav-container">
+                    <a href="#" class="">
+                        <span class="text">CSS</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="">
+                    <span class="text">After Effects</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">
+                    <span class="text">Blender</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- <div class="container">
+        <div class="video-preview ">
+            <img class="thumbnail" src="images/Images/Cubes.jpg">
+            <div class="tooltip"> This Project</div>
+            <div class="modal">project guide</div>
+        </div>
+        <div class="video-preview">
+            <img class="thumbnail" src="images/Images/Cubes.jpg">
+            <div class="tooltip"> This Project</div>
+        </div>
+        <div class="video-preview">
+            <img class="thumbnail" src="images/Images/Cubes.jpg">
+            <div class="tooltip"> This Project</div>
+        </div>
+        <div class="video-preview">
+            <img class="thumbnail" src="images/Images/Cubes.jpg">
+            <div class="tooltip"> This Project</div>
+        </div>
+        <div class="video-preview">
+            <img class="thumbnail" src="images/Images/Cubes.jpg">
+            <div class="tooltip"> This Project</div>
+        </div>
+        <div class="video-preview">
+            <img class="thumbnail" src="images/Images/Cubes.jpg">
+            <div class="tooltip"> This Project</div>
+        </div>
+
+    </div> -->
+    <div class="container">
+        <div class="card__container">
+
+            <article class="card__article" >
+                <img src="download (50).jpg" alt="image" class="card-img">
+                <div class="card-data">
+                    <span class="card-description">
+                        Image 1
+                    </span>
+                    <h2 class="card-title">
+                        Text
+                    </h2>
+                    <button class="btn" id="read-more-btn" onclick="toggleTab(event)">
+                        Show Info
+                    </button>
+        
+                    <!-- Hidden Content -->
+
+                    <div class="tab-container" onmouseleave="resetTab()">
+                        <p class="extra-info">
+                            Lorem ipsum dolor sit,
+                             amet consectetur adipisicing elit.
+                              Fuga cum voluptatibus tempore officiis pariatur. 
+                              Id quod qui pariatur eum nulla voluptatem quaerat! 
+                              Vitae quasi quisquam porro officia a doloribus voluptatibus?
+                        </p>
+                        <div class="tab-header">css</div>
+                        <img class="tab-background" src="images/plain-backdrop-decorative-gray-textured.jpg">
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card__article">
+                <img src="download (50).jpg" alt="image" class="card-img">
+                <div class="card-data">
+                    <span class="card-description">
+                        Image 2
+                    </span>
+                    <h2 class="card-title">
+                        Text
+                    </h2>
+                    <button class="btn" onclick="toggleTab(event)">
+                        Show Info
+                    </button>
+        
+                    <!-- Hidden Content -->
+
+                    <div class="tab-container" onmouseleave="resetTab()">
+                        <p>
+                            Here is some additional information.
+                        </p>
+                        <div class="tab-header">css</div>
+                        <img class="tab-background" src="images/plain-backdrop-decorative-gray-textured.jpg">
+                    </div>
+                </div>
+            </article>
+
+            <article class="card__article">
+                <img src="download (50).jpg" alt="image" class="card-img">
+                <div class="card-data">
+                    <span class="card-description">
+                        Image 3
+                    </span>
+                    <h2 class="card-title">
+                        Text
+                    </h2>
+                    <button class="btn" id="read-more-btn" onclick="toggleTab(event)">
+                        Show Info
+                    </button>
+        
+                    <!-- Hidden Content -->
+
+                    <div class="tab-container" onmouseleave="resetTab()">
+                        <p>
+                            Here is some additional information.
+                        </p>
+                        <div class="tab-header">css</div>
+                        <img class="tab-background" src="images/plain-backdrop-decorative-gray-textured.jpg">
+                    </div>
+                    
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <!-- <div class="container">
+        <div class="video-grid">
+            <article class="card-article">
+                <img src="download (50).jpg" alt="image" class="card-img">
+                <div class="card-data">
+                    <span class="card-description">
+                        Image 1
+                    </span>
+                    <h2 class="card-title">
+                        Text
+                    </h2>
+                    <button class="info-btn" id="read-more-btn" onclick="toggleTab(event)">
+                        Show Info
+                    </button>
+                    Hidden Content
+
+                    <div class="tab-container">
+                        <p>
+                            Here's additional info
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="card-article">
+                <img src="download (50).jpg" alt="image" class="card-img">
+                <div class="card-data">
+                    <span class="card-description">
+                        Image 1
+                    </span>
+                    <h2 class="card-title">
+                        Text
+                    </h2>
+                    <button class="info-btn" id="read-more-btn" onclick="toggleTab(event)">
+                        Show Info
+                    </button>
+                    Hidden Content
+
+                    <div class="tab-container">
+                        <p>
+                            Here's additional info
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="card-article">
+                <img src="download (50).jpg" alt="image" class="card-img">
+                <div class="card-data">
+                    <span class="card-description">
+                        Image 1
+                    </span>
+                    <h2 class="card-title">
+                        Text
+                    </h2>
+                    <button class="info-btn" id="read-more-btn" onclick="toggleTab(event)">
+                        Show Info
+                    </button>
+                    Hidden Content
+
+                    <div class="tab-container">
+                        <p>
+                            Here's additional info
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="card-article">
+                <img src="download (50).jpg" alt="image" class="card-img">
+                <div class="card-data">
+                    <span class="card-description">
+                        Image 1
+                    </span>
+                    <h2 class="card-title">
+                        Text
+                    </h2>
+                    <button class="info-btn" id="read-more-btn" onclick="toggleTab(event)">
+                        Show Info
+                    </button>
+                    Hidden Content
+
+                    <div class="tab-container">
+                        <p>
+                            Here's additional info
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="card-article">
+                <img src="download (50).jpg" alt="image" class="card-img">
+                <div class="card-data">
+                    <span class="card-description">
+                        Image 1
+                    </span>
+                    <h2 class="card-title">
+                        Text
+                    </h2>
+                    <button class="info-btn" id="read-more-btn" onclick="toggleTab(event)">
+                        Show Info
+                    </button>
+                    Hidden Content
+
+                    <div class="tab-container">
+                        <p>
+                            Here's additional info
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="card-article">
+                <img src="download (50).jpg" alt="image" class="card-img">
+                <div class="card-data">
+                    <span class="card-description">
+                        Image 1
+                    </span>
+                    <h2 class="card-title">
+                        Text
+                    </h2>
+                    <button class="info-btn" id="read-more-btn" onclick="toggleTab(event)">
+                        Show Info
+                    </button>
+                    Hidden Content
+
+                    <div class="tab-container">
+                        <p>
+                            Here's additional info
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </div> -->
+
+
+    <script>
+      // Toggle navigation menu
+function toggleNav() {
+    let nav = document.getElementById('nav-bar');
+    let body = document.body;
+    
+    if (nav.style.display === 'none' || nav.style.display === '') {
+        nav.style.display = 'block';
+        body.classList.add('nav-active');
+    } else {
+        nav.style.display = 'none';
+        body.classList.remove('nav-active');
+    }
+}
+
+// Toggle the tab content
+function toggleTab(event) {
+    let card = event.target.closest(".card__article"); // Get the clicked card
+    let tab = card.querySelector(".tab-container"); // Find the tab inside that card
+
+    if (tab.classList.contains("show")) {
+        tab.classList.remove("show"); // Hide the tab
+    } else {
+        document.querySelectorAll(".tab-container").forEach(t => t.classList.remove("show")); // Hide all other tabs
+        tab.classList.add("show"); // Show the clicked tab
+    }
+}
+
+// Hide tab when mouse leaves the card
+function resetTab(event) {
+    let card = event.currentTarget; // The card that triggered the event
+    let tab = card.querySelector(".tab-container"); // Find the tab inside the card
+    tab.classList.remove("show"); // Hide the tab
+}
+
+// Attach `resetTab()` event listener to each `.card__article`
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".card__article").forEach(card => {
+        card.addEventListener("mouseleave", resetTab);
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".btn").forEach(button => {
+        button.addEventListener("click", function () {
+            this.classList.add("active"); // Lock the style by adding the class
+        });
+    });
+});
+    </script>
+</body>
+</html>

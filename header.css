@@ -1,0 +1,235 @@
+.header
+{
+    display: flex;
+    width:100%;
+    height: 100px;
+    position: absolute;
+    top:10px;
+    left: 0;
+
+    background-color: rgba(224, 224, 224, 0.01);
+    box-shadow: 10px 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0px 12px 20px rgb(255, 255, 255),
+    -9px -14px 12px rgb(255, 255, 255);
+    
+}
+
+/* ====all section styling==== */
+
+.left-section, .mid-section,.right-section
+{
+    max-height: 100px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 15px;
+    
+   
+    
+}
+
+/* ====left ======= */
+
+.left-section
+{
+    flex:1;
+}
+
+.nav-icon{
+    font-size:40px;
+    font-weight: 300;
+    color: black;
+    cursor: pointer;
+    
+}
+/* ====middle section ===== */
+.mid-section
+{
+    
+    flex:1;
+    text-align: center;
+   
+}
+
+.box
+{
+    background-color: rgb(255, 255, 255);
+    width: 90px;
+    height: 50px;
+    box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.116), 
+    inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 
+    0 -10px 15px -1px rgba(255, 255, 255, 0.6), 
+    inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), 
+    inset 0 0 5px 1px rgba(255, 255, 255, 0.8), 
+    inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+    
+    
+    z-index: 10;
+    cursor: pointer;
+}
+.label
+{
+    line-height: 49px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 42px;
+    
+    position: relative;
+    
+}
+.eyebrow-img{
+    
+    position: absolute;
+    top: 15px;
+    right: 2px;
+    pointer-events: none;
+    transform: translate(13px);
+    text-align: center;
+   
+    height: 22px;
+    z-index: 20;
+
+    opacity: .9;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+    color: rgba(0, 0, 0, 0.192);
+}
+
+/* ===hidden==== */
+ .animated-seq{
+    height: 50px;
+    width: 100px;
+    transform: scale(.8);
+    
+    background-size: cover;
+    background-position: center;
+    animation: imageseq .8s ease-in-out;
+    animation-iteration-count: infinite;
+    opacity: 1;
+    transition: opacity .15s ease-in-out;
+    
+    position: absolute;
+    bottom: 10px;
+    
+   
+} 
+/* ====keyframes==== */
+
+@keyframes run{
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(-30px);}
+}
+
+@keyframes imageseq{
+    0%{ background-image: url(images/eye_1.png);}
+    50%{ background-image: url(images/eye_2.png);}
+    75%{ background-image: url(images/eye_3.png);}
+    100%{ background-image: url(images/eye_1.png);}
+    
+}
+
+/* ====hover==== */
+
+.box:hover{
+    animation: run .2s ease-in-out forwards;
+}
+
+ .box:hover .animated-seq
+{
+    opacity: 1;
+} 
+
+
+/* ====right section ==== */
+.right-section
+{
+    
+    flex:1;
+    display: flex;
+
+
+}
+.wrapper .button{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    aspect-ratio: 1/1;
+   
+    margin: 0 5px;
+    background: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    
+    transition: all .13s ease-in-out;
+   
+}
+.wrapper .button .icon{
+    display: inline-block;
+    height: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50px;
+    line-height: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+.instagram-logo, .mail-icon,
+.linkedin-icon
+{
+    height: 15px;
+    padding-top:7px;
+    
+}
+
+
+
+/* ====color and styling for hover effects====== */
+
+
+
+.wrapper .button .icon,
+.wrapper .button span{
+    transition: all .3s ease-in-out;
+}
+.wrapper .button:nth-child(1):hover .icon{
+    background: linear-gradient(30deg, #ea1f4b,#ffffffb2, #f36716);
+   
+
+}
+.wrapper .button:nth-child(2):hover .icon{
+    background: linear-gradient(30deg, #45caffc4,#ffffffb2, #ff1b6bfd);
+}
+
+.wrapper .button:nth-child(3):hover .icon{
+    background: linear-gradient(30deg, #519dcd,#ffffffb2, #bcc9ca);
+}
+.wrapper .button:nth-child(1):hover span{
+    color:  #f36716;
+}
+.wrapper .button:nth-child(2):hover span{
+    color:  #ff1b6bfd;
+}
+.wrapper .button:nth-child(3):hover span{
+    color: dodgerblue;
+}
+
+
+/* ===final hover effects ==== */
+.wrapper .button .icon i{
+    font-size:15px;
+    line-height: 30px;
+}
+.wrapper .button:hover{
+    width:100px;
+    box-shadow: 1px 1px 3px #ccd0d4, 
+    0 0 0 rgba(0, 0, 0, 0.8), 
+    1px 1px 4px #fff;
+}
+.wrapper .button span{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-left:10px;
+    padding-bottom: 92px;
+}
